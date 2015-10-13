@@ -16,11 +16,11 @@ class Christmas {
 
 		int size = 1_000_004;
 
-		BigInteger[] ans = new BigInteger[size];
-		ans[1] = BigInteger.valueOf(1);
-		ans[2] = BigInteger.valueOf(4);
+		long[] ans = new long[size];
+		ans[1] = 1;
+		ans[2] = 4;
 		for(int i = 3; i != size-1; ++i)
-			ans[i] = ans[i-1].add(BigInteger.valueOf((((long)(i+1))*i/2)));	
+			ans[i] = ans[i-1] + ((long)(i+1))*i/2;	
 
 		int n;
 
